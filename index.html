@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Furkan Kırtay Portfolyo</title>
+<meta name="description" content="Furkan Kırtay - Prompt Engineering ve Vibe Coding ile yazılım geliştirme. Python projeleri, AI destekli geliştirme ve daha fazlası.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💠</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">FK<span class="dot">.</span></a>
+
+    <div class="nav-right">
+      <button class="lang-switch" id="langSwitch" aria-label="Dili değiştir / Switch language">
+        <span class="lang-option" data-lang="tr">TR</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-option" data-lang="en">EN</span>
+      </button>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">Hakkımda</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Yetenekler</a></li>
+        <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Deneyim</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projeler</a></li>
+        <li><a href="#contact" class="nav-link nav-cta" data-i18n="nav.contact">İletişim</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="hero">
+  <div class="hero-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow reveal" data-i18n="hero.eyebrow">👋 Merhaba</p>
+    <h1 class="hero-title reveal">
+      <span class="hero-name">Furkan Kırtay</span>
+    </h1>
+    <div class="hero-role reveal">
+      <span class="typewriter" id="typewriter"></span><span class="cursor-blink">|</span>
+    </div>
+    <p class="hero-desc reveal" data-i18n="hero.desc">
+      Bakırköy, İstanbul merkezli — AI destekli yazılım geliştirme (vibe coding) ve
+      prompt engineering üzerine çalışıyorum. Fikirleri hızlıca çalışan ürünlere dönüştürmeyi seviyorum.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#contact" class="btn btn-primary">
+        <span data-i18n="hero.btnContact">Benimle İletişime Geç</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#projects" class="btn btn-ghost" data-i18n="hero.btnProjects">Projelerimi Gör</a>
+    </div>
+    <div class="hero-socials reveal">
+      <a href="https://github.com/Kirtayy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/furkan-k%C4%B1rtay-741a04303/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+      </a>
+      <a href="mailto:furkankirtay1470@gmail.com" aria-label="E-posta">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 5h18v14H3V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m3 6 9 7 9-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-indicator" aria-label="Aşağı kaydır">
+    <span></span>
+  </a>
+</header>
+
+<main>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <p class="section-tag reveal" data-i18n="about.tag">01 — Tanışalım</p>
+      <h2 class="section-title reveal" data-i18n="about.title">Hakkımda</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p data-i18n="about.p1" data-i18n-html="true">
+            Merhaba, ben Furkan ve <strong>24 yaşındayım</strong>. 3 Ağustos'ta Almanya'nın Geislingen
+            ilçesinde doğdum ve 3 yaşında ailemle birlikte Türkiye'ye taşındım. İstanbul'da büyüdüm
+            ve eğitim hayatım İstanbul'da geçti.
+          </p>
+          <p data-i18n="about.p2">
+            Liseyi bitirdikten sonra tek başıma Almanya'ya taşınma kararı aldım. Almanya'da 2 yıl boyunca
+            Almanca öğrendim ve dilimi geliştirdim, ardından tekrar Türkiye'ye dönme kararı aldım.
+            Türkiye'ye döndükten sonra 3 yıl boyunca Almanca dili üzerine call center sektöründe çalıştım.
+          </p>
+          <p data-i18n="about.p3" data-i18n-html="true">
+            Şimdi ise <strong>vibe coding</strong> ve <strong>prompt engineering</strong> ile yazılım
+            sektöründe çalışmak istiyorum. Kendimi bildim bileli teknolojiyle iç içe olan bir insanım
+            ve şu ana kadar yaptığım çalışmalardan oldukça keyif aldım, almaya da devam ediyorum.
+          </p>
+
+          <div class="about-facts">
+            <div class="fact">
+              <span class="fact-label" data-i18n="about.fact.location">Konum</span>
+              <span class="fact-value">Bakırköy, İstanbul</span>
+            </div>
+            <div class="fact">
+              <span class="fact-label" data-i18n="about.fact.born">Doğum</span>
+              <span class="fact-value" data-i18n="about.fact.born.value">Geislingen, Almanya</span>
+            </div>
+            <div class="fact">
+              <span class="fact-label" data-i18n="about.fact.education">Eğitim</span>
+              <span class="fact-value" data-i18n="about.fact.education.value">Anadolu Üniversitesi — 1. Sınıf</span>
+            </div>
+            <div class="fact">
+              <span class="fact-label" data-i18n="about.fact.focus">Odak</span>
+              <span class="fact-value">AI / Prompt Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="card-glow"></div>
+          <div class="avatar-ring">
+            <div class="avatar-inner">FK</div>
+          </div>
+          <h3>Furkan Kırtay</h3>
+          <p class="card-role">Prompt Engineering &amp; Vibe Coding</p>
+          <div class="lang-bars">
+            <div class="lang-row">
+              <span data-i18n="about.lang.tr">Türkçe</span>
+              <div class="bar"><div class="bar-fill" style="--pct:100%"></div></div>
+              <span class="lang-level" data-i18n="about.lang.tr.level">Anadil</span>
+            </div>
+            <div class="lang-row">
+              <span data-i18n="about.lang.de">Almanca</span>
+              <div class="bar"><div class="bar-fill" style="--pct:70%"></div></div>
+              <span class="lang-level">B2</span>
+            </div>
+            <div class="lang-row">
+              <span data-i18n="about.lang.en">İngilizce</span>
+              <div class="bar"><div class="bar-fill" style="--pct:65%"></div></div>
+              <span class="lang-level" data-i18n="about.lang.en.level">Teknik</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-tag reveal" data-i18n="skills.tag">02 — Yetenekler</p>
+      <h2 class="section-title reveal" data-i18n="skills.title">Neler Yapabiliyorum</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal featured">
+          <div class="skill-icon">✨</div>
+          <h3>AI / Prompt Engineering</h3>
+          <p data-i18n="skills.ai.desc">Yapay zeka modelleriyle etkili iletişim kurma, doğru prompt tasarımı ve AI araçlarını
+             üretken şekilde kullanma konusunda ana odak alanım.</p>
+          <span class="skill-badge" data-i18n="skills.ai.badge">Ana Yetenek</span>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">🐍</div>
+          <h3>Python</h3>
+          <p data-i18n="skills.python.intro">Çeşitli uygulamalar geliştirdim:</p>
+          <ul class="skill-list">
+            <li data-i18n="skills.python.li1">Hesap makinesi</li>
+            <li data-i18n="skills.python.li2">Hava durumu uygulaması (OpenWeather API)</li>
+            <li data-i18n="skills.python.li3">Şifre üretici</li>
+            <li data-i18n="skills.python.li4">Sayı tahmin oyunu</li>
+            <li data-i18n="skills.python.li5">Not hesaplama uygulaması</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">🚀</div>
+          <h3>Vibe Coding</h3>
+          <p data-i18n="skills.vibe.desc">Claude Code ile AI destekli yazılım geliştirme yaparak fikirlerimi hızlıca
+             çalışan projelere dönüştürüyorum.</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon">⚛️</div>
+          <h3>React / Next.js</h3>
+          <p data-i18n="skills.react.desc">Modern frontend geliştirme konusunda öğrenme sürecindeyim, aktif olarak
+             kendimi geliştiriyorum.</p>
+          <span class="skill-badge skill-badge-alt" data-i18n="skills.react.badge">Öğrenim Sürecinde</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="section-inner">
+      <p class="section-tag reveal" data-i18n="experience.tag">03 — Yolculuk</p>
+      <h2 class="section-title reveal" data-i18n="experience.title">Deneyim &amp; Eğitim</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date" data-i18n="exp.item1.date">Şu an</span>
+            <h3 data-i18n="exp.item1.title">Vibe Coding &amp; Prompt Engineering</h3>
+            <p data-i18n="exp.item1.desc">AI destekli araçlarla yazılım geliştirme öğreniyor ve bu alanda kariyer inşa ediyorum.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date" data-i18n="exp.item2.date">Devam ediyor</span>
+            <h3>Anadolu Üniversitesi</h3>
+            <p data-i18n="exp.item2.desc">1. Sınıf, Uzaktan Eğitim.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date" data-i18n="exp.item3.date">3 Yıl</span>
+            <h3 data-i18n="exp.item3.title">Concentrix — Almanca Teknik Müşteri Destek Uzmanı</h3>
+            <p data-i18n="exp.item3.desc">HBO Max ve Sky projelerinde görev aldım. 3 yıl boyunca Almanca dilinde call center
+               sektöründe çalıştım.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date" data-i18n="exp.item4.date">2 Yıl</span>
+            <h3 data-i18n="exp.item4.title">Almanya — Dil Gelişimi</h3>
+            <p data-i18n="exp.item4.desc">Liseyi bitirdikten sonra tek başıma Almanya'ya taşındım ve 2 yıl boyunca
+               Almanca öğrenip dilimi geliştirdim.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-tag reveal" data-i18n="projects.tag">04 — Çalışmalar</p>
+      <h2 class="section-title reveal" data-i18n="projects.title">Projelerim</h2>
+
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-icon">🧮</div>
+          <h3 data-i18n="proj1.title">Hesap Makinesi</h3>
+          <p data-i18n="proj1.desc">Python ile geliştirilmiş temel işlemleri destekleyen bir hesap makinesi uygulaması.</p>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-icon">🌦️</div>
+          <h3 data-i18n="proj2.title">Hava Durumu Uygulaması</h3>
+          <p data-i18n="proj2.desc">OpenWeather API kullanılarak geliştirilmiş, anlık hava durumu bilgisi sunan uygulama.</p>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-icon">🔐</div>
+          <h3 data-i18n="proj3.title">Şifre Üretici</h3>
+          <p data-i18n="proj3.desc">Güvenli ve rastgele şifreler üreten Python tabanlı araç.</p>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-icon">🎯</div>
+          <h3 data-i18n="proj4.title">Sayı Tahmin Oyunu</h3>
+          <p data-i18n="proj4.desc">Kullanıcının rastgele üretilen sayıyı tahmin etmeye çalıştığı interaktif oyun.</p>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-icon">📊</div>
+          <h3 data-i18n="proj5.title">Not Hesaplama Uygulaması</h3>
+          <p data-i18n="proj5.desc">Girilen notlara göre ortalama hesaplayan pratik bir Python uygulaması.</p>
+        </div>
+        <div class="project-card reveal project-card-cta">
+          <div class="project-icon">💬</div>
+          <h3 data-i18n="proj6.title">Yeni Projeler Geliyor</h3>
+          <p data-i18n="proj6.desc">Vibe coding ile geliştirdiğim yeni projeler yakında burada olacak.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <p class="section-tag reveal" data-i18n="contact.tag">05 — İletişim</p>
+      <h2 class="section-title reveal" data-i18n="contact.title">Hadi Konuşalım</h2>
+      <p class="contact-lead reveal" data-i18n="contact.lead">
+        Bir proje fikriniz mi var, yoksa sadece merhaba mı demek istiyorsunuz? Aşağıdaki formu
+        doldurun ya da doğrudan iletişim bilgilerimden bana ulaşın.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <a class="contact-item" href="mailto:furkankirtay1470@gmail.com">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 5h18v14H3V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m3 6 9 7 9-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label" data-i18n="contact.item.email">E-posta</span>
+              <span class="contact-item-value">furkankirtay1470@gmail.com</span>
+            </div>
+          </a>
+          <a class="contact-item" href="tel:+905055198212">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.3 1L6.6 10.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label" data-i18n="contact.item.phone">Telefon</span>
+              <span class="contact-item-value">0505 519 82 12</span>
+            </div>
+          </a>
+          <a class="contact-item" href="https://www.linkedin.com/in/furkan-k%C4%B1rtay-741a04303/" target="_blank" rel="noopener noreferrer">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label">LinkedIn</span>
+              <span class="contact-item-value">furkan-kırtay</span>
+            </div>
+          </a>
+          <a class="contact-item" href="https://github.com/Kirtayy" target="_blank" rel="noopener noreferrer">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label">GitHub</span>
+              <span class="contact-item-value">Kirtayy</span>
+            </div>
+          </a>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/yourFormId" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" data-i18n="form.name.label">Ad Soyad</label>
+              <input type="text" id="name" name="name" required data-i18n-placeholder="form.name.placeholder" placeholder="Adınız Soyadınız">
+            </div>
+            <div class="form-group">
+              <label for="email" data-i18n="form.email.label">E-posta</label>
+              <input type="email" id="email" name="email" required placeholder="ornek@mail.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject" data-i18n="form.subject.label">Konu</label>
+            <input type="text" id="subject" name="subject" required data-i18n-placeholder="form.subject.placeholder" placeholder="Mesajınızın konusu">
+          </div>
+          <div class="form-group">
+            <label for="message" data-i18n="form.message.label">Mesaj</label>
+            <textarea id="message" name="message" rows="5" required data-i18n-placeholder="form.message.placeholder" placeholder="Mesajınızı buraya yazın..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span id="submitText" data-i18n="form.submit">Mesajı Gönder</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p><span>©</span> <span id="year"></span> Furkan Kırtay. <span data-i18n="footer.rights">Tüm hakları saklıdır.</span></p>
+    <p class="footer-made" data-i18n="footer.made">Prompt Engineering &amp; Vibe Coding ile ✦ tutkuyla inşa edildi.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
